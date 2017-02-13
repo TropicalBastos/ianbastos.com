@@ -1,0 +1,67 @@
+/** Coutesy of Shaun Greiner on CodePen **/
+
+.loader  {
+  display: none;
+  margin: 0;
+  padding:0;
+  position: absolute;
+  top:80%;
+  left:46%;
+  margin:auto;
+  height:50px;
+  width:20%;
+  align-items:center;
+  z-index: 2000;
+  padding-top: 30px;
+}
+
+.ball1 {
+  background:#00c3c6;
+  min-height:12px;
+  min-width:12px;
+  border-radius:50%;
+  animation: bounce 1s alternate infinite ease-in-out,
+    flash 3s alternate infinite ease-in-out;
+}
+.ball2 {
+  background:#00c3c6;
+  min-height:12px;
+  min-width:12px;
+  border-radius:50%;
+  animation: bounce 1s .333s alternate infinite ease-in-out,
+    flash 3s 1s alternate infinite ease-in-out;
+}
+.ball3 {
+  background:#00c3c6;
+  min-height:12px;
+  min-width:12px;
+  border-radius:50%;
+  animation: bounce 1s .666s alternate infinite ease-in-out,
+    flash 3s 2s alternate infinite ease-in-out;
+}
+
+@keyframes bounce {
+  from{
+    position:relative;
+    top:-1.6vh;
+  }
+  to{
+    position:relative;
+    top:1.6vh;
+  }
+}
+
+@keyframes flash{
+  from{
+    background:#00c3c6;
+  }
+  to{
+    background:0;
+  }
+}
+
+@media screen and (max-width: 390px){
+  .loader{
+    left: 44.5%;
+  }
+}

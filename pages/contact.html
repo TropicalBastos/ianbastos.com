@@ -1,0 +1,37 @@
+<div class="headerWrapper">
+                <h1 id="headerSectionContact">Contact</h1>
+                </div>
+        <div id="content">
+            <div id="contentWrapper">
+                <div class='formBox'>
+                    <form>
+                        <p>
+                            Email:
+                        </p>
+                        <input type='text' id="email" class='formEntry'>
+                        <p class='formLabel'>
+                            Subject:
+                        </p>
+                        <input type='text' id="subject" class='formEntry'>
+                        <p>
+                            Message:
+                        </p>
+                        <textarea id="message" class='formEntry'></textarea>
+                        <p id="charLimit">Character limit {{wordCount}}</p>
+
+                        <button class="contactButton">Send</button>
+
+                        <div class="loader">
+                          <div class="ball1"></div>
+                            <div class="ball2"></div>
+                            <div class="ball3"></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+<div class="messageSent">
+    <h3>Your message to Ian has been sent successfully</h3>
+    <button class="contactButton">OK</button>
+</div>
