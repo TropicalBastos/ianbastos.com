@@ -17,47 +17,47 @@ $(document).ready(function(){
         $("canvas").css("display","none");
     }},50);
 
-   // if follow me pop up has appeared
-   var followMePopped = false;
-   var op;
 
-   //opacity function
-   function calculateOp(){
-        op = ($("body").scrollTop()/$(window).height());
-        return op;
-    }
+    // if follow me pop up has appeared
+    var followMePopped = false;
+    var op;
 
-    //reverse opacity for top decoration
-    function reverseOp(){
-        var rop;
-        rop = 1-calculateOp();
-        return rop;
-    }
+    //opacity function
+    function calculateOp(){
+         op = ($("body").scrollTop()/$(window).height());
+         return op;
+     }
+
+     //reverse opacity for top decoration
+     function reverseOp(){
+         var rop;
+         rop = 1-calculateOp();
+         return rop;
+     }
+
+    //scroll event handler
+    $(window).on('scroll',function(){
+        $("#waveImage>img").css("opacity",calculateOp());
+        $("#waveImageTop").css("opacity",reverseOp());
+
+        if($("body").scrollTop() >= 400){
+
+            //turn off event handler only fire once
+            if(!followMePopped){
+                $("#bottom").css('overflow','visible');
+                //$(".scrollDiv").animate({'top':'-=200px'},1000);
+                $(".scrollDiv").addClass("popup");
+                followMePopped = true;
+            }
+            }
+        });
 
     //click nav cog handler
-    $("#cog").click(function(){
+    $("#cog").on('click',function(){
       $("#cog").addClass("spin");
       $(".navCollapse").toggle('fold',function(){
         $("#cog").removeClass("spin");
       })
-    });
-
-    //clicking off nav menu
-    $(document).on("click touchend",function(e){
-      if(!$(e.target).is(".navCollapse")
-    && !$(e.target).is("#cog")){
-      if($(".navCollapse").css("display")==="block"){
-          $(".navCollapse").hide('fold',function(){
-            $("#cog").removeClass("spin");
-          })
-        }
-      }else if($(e.target).is(".nMobile")){
-        if($(".navCollapse").css("display")==="block"){
-            $(".navCollapse").toggle('fold',function(){
-              $("#cog").removeClass("spin");
-            });
-      }
-    }
     });
 
     //hover over nav buttons
@@ -82,31 +82,7 @@ $(document).ready(function(){
        $(this).attr("src","res//contactBtn.png");
     });
 
-    //scroll event handler
-    $(window).on("scroll", function(){
-        $("#waveImage>img").css("opacity",calculateOp());
-        $("#waveImageTop").css("opacity",reverseOp());
-
-        if($("body").scrollTop() >= 400){
-
-            //turn off event handler only fire once
-            if(!followMePopped){
-                $("#bottom").css('overflow','visible');
-                //$(".scrollDiv").animate({'top':'-=200px'},1000);
-                $(".scrollDiv").addClass("popup");
-                followMePopped = true;
-            }
-            }
-        });
-
-    /*opacity for decorative tentacles
-    setTimeout(function(){
-        $("#waveImage").css("display","block");
-        $("#waveImage>img").animate({"opacity":"+=1"},1000);
-    },1000);*/
-
     //link click event
-
     $(document).on('click',".scrollDiv>h1",function(){
        window.open("https://www.instagram.com/tropicalbastos/");
     });

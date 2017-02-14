@@ -387,7 +387,7 @@ function goToIndex(i){
     }
 
     Cookies.set('intro',p);
-    window.location.replace("../../index.html");
+    window.location.replace("../../index.php");
 }
 
 

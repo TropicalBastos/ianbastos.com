@@ -7,6 +7,12 @@
 body{
     margin: 0;
     background-color: black;
+    height: 100%;
+}
+
+.blueFlash{
+    margin: 0;
+    background-color: black;
     -webkit-animation: animatedBackground 2s;
             animation: animatedBackground 2s;
     height: 100%;
@@ -327,10 +333,10 @@ p{
 }
 
 .scrollDiv{
-    position: absolute;
+    position: relative;
     width: 100%;
     margin: 0 auto;
-    top: 200px;
+    bottom:-200px;
 }
 .scrollDiv:before{
     content: '';
@@ -862,6 +868,15 @@ textarea:focus{
     display: none;
   }
 
+}
+
+@media screen and (max-width: 1031px){
+  .scrollDiv{
+    bottom: 0px;
+  }
+  .scrollDiv.popup{
+    transform:none;
+  }
 }
 
 @media screen and (max-width: 500px){

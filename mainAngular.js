@@ -19,29 +19,30 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
 
 
     //set pathname for dynamic loaded pieces of html
-    $(".about").click(function(){
+    $(document).on('click touchend','.about',function(){
+      console.log("hats");
        $scope.page = "pages/about.html";
        $scope.$apply();
        $("canvas").css("display","block");
        $(".one-half").css("background-color","black");
-       $(".navCollapse").toggle('fold',function(){
+       $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");
        });
        document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
-    $(".work").click(function(){
+    $(document).on('click touchend','.work',function(){
        $scope.page = "pages/work.html";
        $("canvas").css("display","none");
-       $(".navCollapse").toggle('fold',function(){
+       $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");
        });
        document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
-    $(".contact").click(function(){
+    $(document).on('click touchend','.contact',function(){
        $scope.page = "pages/contact.html";
        $scope.$apply();
        $("canvas").css("display","none");
-       $(".navCollapse").toggle('fold',function(){
+       $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");
        });
        document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -56,3 +57,21 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     });
 
 }]);
+
+//clicking off nav menu listener
+function onNavExitListener(e){
+  if(!$(e.target).is(".navCollapse")
+&& !$(e.target).is("#cog")){
+  if($(".navCollapse").css("display")==="block"){
+      $(".navCollapse").hide('fold',function(){
+        $("#cog").removeClass("spin");
+      })
+    }
+  }else if($(e.target).is(".nMobile")){
+    if($(".navCollapse").css("display")==="block"){
+        $(".navCollapse").hide('fold',function(){
+          $("#cog").removeClass("spin");
+        });
+      }
+  }
+}
