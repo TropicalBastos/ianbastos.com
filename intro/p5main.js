@@ -18,6 +18,7 @@ var fire, fireHover;
 var frames;
 var delta;
 var flickerSpace = false;
+var fireMobile, fireMobileHover;
 touchOn = false;
 
 function preload(){
@@ -37,6 +38,8 @@ function preload(){
     rightArrowHover = loadImage("res//rightArrowHover.png");
     fire = loadImage("res//fire.png");
     fireHover = loadImage("res//fireHover.png");
+    fireMobile = loadImage("res//fireMobile.png");
+    fireMobileHover = loadImage("res//fireMobileHover.png");
 }
 
 function setup(){
@@ -262,16 +265,15 @@ function Control(i){
             this.height = 70;
             this.y = height - 80;
             if(width<800){
-                this.width = 100;
-                this.x = (width/2) - 50;
-                this.height = 50;
-                this.y = height - 60;
+                this.width = 50;
+                this.x = (width/2) -25;
+                this.height = 100;
+                this.y = height - 140;
+                this.img = fireMobile;
+                this.hover = fireMobileHover;
             }
             if(height < 700){
-                this.width = 100;
-                this.x = (width/2) - 50;
-                this.height = 40;
-                this.y = height - 50;
+                this.y = height - 120;
             }
             break;
     }
@@ -294,7 +296,11 @@ function Control(i){
     }
             }
     }
+      if(width>=800 ||this.index===0 || this.index===1){
           image(this.hover,this.x,this.y,this.width,this.height);
+        }else{
+          image(this.img,this.x,this.y,this.width,this.height);
+        }
       }else if(this.keyPressed){
           image(this.hover,this.x,this.y,this.width,this.height);
       }else{
@@ -302,6 +308,12 @@ function Control(i){
       }
 
       if(this.index === 2 && flickerSpace){
+          image(this.hover,this.x,this.y,this.width,this.height);
+      }
+
+      if(width<800 && this.index===2){
+        var d = dist(this.x,this.y+this.height/2,mouseX,mouseY);
+        if(d<this.width)
           image(this.hover,this.x,this.y,this.width,this.height);
       }
 
@@ -349,11 +361,17 @@ function mouseClicked(){
              goToIndex(i);
          }
      }
-
+     if(width>=800){
      var d = dist(controls[2].x,controls[2].y,mouseX,mouseY);
       if(d<controls[2].width){
           bullets.push(new Bullet(ship.x+(ship.width/2),ship.y));
     }
+  }else{
+    var d = dist(controls[2].x,controls[2].y+controls[2].height/2,mouseX,mouseY);
+     if(d<controls[2].width){
+         bullets.push(new Bullet(ship.x+(ship.width/2),ship.y));
+   }
+  }
 }
 
 //go to the page in which the cloud represents
@@ -375,7 +393,7 @@ function goToIndex(i){
 
 //mobile touch functionality
 
-$(document).on('touchstart',function(e){
+$(document).on('touchend',function(e){
   //check if user has tapped on clouds
   for(var i = 0; i < target.length; i++){
     var d = dist(target[i].x+target[i].width/2,target[i].y,mouseX,mouseY);
@@ -383,6 +401,11 @@ $(document).on('touchstart',function(e){
         goToIndex(i);
       }
     }
+    //check if user has tapped fire button
+    var d = dist(controls[2].x,controls[2].y+controls[2].height/2,mouseX,mouseY);
+     if(d<controls[2].width){
+         bullets.push(new Bullet(ship.x+(ship.width/2),ship.y));
+       }
   });
 
 

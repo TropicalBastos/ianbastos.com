@@ -43,7 +43,7 @@ $(document).ready(function(){
     });
 
     //clicking off nav menu
-    $(document).on("click",function(e){
+    $(document).on("click touchend",function(e){
       if(!$(e.target).is(".navCollapse")
     && !$(e.target).is("#cog")){
       if($(".navCollapse").css("display")==="block"){
