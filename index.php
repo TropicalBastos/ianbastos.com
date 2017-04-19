@@ -9,9 +9,9 @@
 <html ng-app='mainApp'>
     <head>
         <title>Ian Bastos</title>
-        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
         <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-        <link rel='stylesheet' type='text/css' href='loader.css'>
+        <link rel='stylesheet' type='text/css' href='css/loader.css'>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
@@ -19,9 +19,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="mainpage.js"></script>
-        <script src='mainAngular.js'></script>
-        <script src="particles.js"></script>
+        <script src="js/mainpage.js"></script>
+        <script src='js/mainAngular.js'></script>
+        <script src="js/particles.js"></script>
     </head>
     <body ng-controller='mainCtrl'>
 

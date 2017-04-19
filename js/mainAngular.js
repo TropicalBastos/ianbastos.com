@@ -20,7 +20,6 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
 
     //set pathname for dynamic loaded pieces of html
     $(document).on('click touchend','.about',function(){
-      console.log("hats");
        $scope.page = "pages/about.html";
        $scope.$apply();
        $("canvas").css("display","block");
@@ -32,6 +31,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     });
     $(document).on('click touchend','.work',function(){
        $scope.page = "pages/work.html";
+       $scope.$apply();
        $("canvas").css("display","none");
        $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");

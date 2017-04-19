@@ -84,7 +84,11 @@ $(document).ready(function(){
 
     //link click event
     $(document).on('click',".scrollDiv>h1",function(){
-       window.open("https://www.instagram.com/tropicalbastos/");
+      if($(this).parent().hasClass("github")){
+        window.open("https://github.com/TropicalBastos");
+      }else{
+        window.open("https://www.instagram.com/tropicalbastos/");
+      }
     });
 
 

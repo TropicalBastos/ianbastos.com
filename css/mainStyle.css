@@ -2,8 +2,13 @@
 
 @font-face{
   font-family: zian;
-  src: url("res//zian.otf");
+  src: url("../res//zian.otf");
 }
+
+html{
+  overflow-x: hidden;
+}
+
 body{
     margin: 0;
     background-color: black;
@@ -234,6 +239,26 @@ p{
     box-shadow: 1px 1px 0.5px 0.5px white;
     -webkit-animation: bringToCenterFromRight 0.5s;
             animation: bringToCenterFromRight 0.5s;
+}
+
+#headerSectionWork{
+  position: absolute;
+  -webkit-animation: bringToCenter 0.5s;
+          animation: bringToCenter 0.5s;
+  top: -2%;
+}
+#headerSectionWork:after{
+  content: '';
+  position: absolute;
+  background-color: tomato;
+  top: 35px;
+  left: -15px;
+  height: 3px;
+  width: 150px;
+  opacity: 0.8;
+  box-shadow: 1px 1px 0.5px 0.5px white;
+  -webkit-animation: bringToCenterFromRight 0.5s;
+          animation: bringToCenterFromRight 0.5s;
 }
 
 @-webkit-keyframes bringToCenter{
@@ -825,6 +850,10 @@ textarea:focus{
 
   #headerSection{
     top:100px;
+  }
+
+  #headerSectionWork{
+    top: 100px;
   }
 
   .headerWrapper{
