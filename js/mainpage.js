@@ -1,5 +1,6 @@
 var followMePopped;
 var okToSend = [false,false,false];
+var pageLoaded = false;
 
 $(document).ready(function(){
 
@@ -7,8 +8,8 @@ $(document).ready(function(){
   setTimeout(function(){
     $(".one-half").css("background-color","black");
     $("canvas").addClass("fadingIn");
-    //initialise setup for particles
-      setup();
+    pageLoaded = true;
+    setup();
   },1000);
 
    //hide particle canvas if not on about page
@@ -25,6 +26,10 @@ $(document).ready(function(){
     //opacity function
     function calculateOp(){
          op = ($("body").scrollTop()/$(window).height());
+         //moz support
+         if(op===0){
+           op = document.documentElement.scrollTop/$(window).height();
+         }
          return op;
      }
 
@@ -40,12 +45,10 @@ $(document).ready(function(){
         $("#waveImage>img").css("opacity",calculateOp());
         $("#waveImageTop").css("opacity",reverseOp());
 
-        if($("body").scrollTop() >= 400){
-
+        if($("body").scrollTop() >= 400
+            || document.documentElement.scrollTop >= 400){
             //turn off event handler only fire once
             if(!followMePopped){
-                $("#bottom").css('overflow','visible');
-                //$(".scrollDiv").animate({'top':'-=200px'},1000);
                 $(".scrollDiv").addClass("popup");
                 followMePopped = true;
             }
@@ -218,5 +221,16 @@ $(document).ready(function(){
            $(".messageSent").removeClass("sent");
         });
     });
+
+//make sure canvas stays the right size
+window.requestAnimationFrame(canvasContextualizer);
+function canvasContextualizer(){
+  if($(document).width()>1072){
+    $("canvas").css({"top":"300px"});
+  }else{
+    $("canvas").css({"top":"0"});
+  }
+  window.requestAnimationFrame(canvasContextualizer);
+}
 
 });

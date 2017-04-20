@@ -16,36 +16,44 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
 
     $scope.page = whichPage;
     $scope.wordCount = 500;
-
+    $scope.phoneGraphic = $scope.page==="pages/about.html";
 
     //set pathname for dynamic loaded pieces of html
     $(document).on('click touchend','.about',function(){
        $scope.page = "pages/about.html";
+       $scope.phoneGraphic = true;
        $scope.$apply();
        $("canvas").css("display","block");
        $(".one-half").css("background-color","black");
        $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");
        });
+       $scope.wordCount = 500;
        document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
     $(document).on('click touchend','.work',function(){
+      $scope.phoneGraphic = false;
        $scope.page = "pages/work.html";
        $scope.$apply();
        $("canvas").css("display","none");
        $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");
        });
+       $scope.wordCount = 500;
        document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
     $(document).on('click touchend','.contact',function(){
        $scope.page = "pages/contact.html";
+       $scope.phoneGraphic = false;
        $scope.$apply();
        $("canvas").css("display","none");
        $(".navCollapse").hide('fold',function(){
          $("#cog").removeClass("spin");
        });
        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+    $(document).on('click touchend','.replayintro',function(){
+      window.location.href="/";
     });
 
     //listener for word count

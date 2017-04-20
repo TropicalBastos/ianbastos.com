@@ -21,12 +21,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="js/mainpage.js"></script>
         <script src='js/mainAngular.js'></script>
-        <script src="js/particles.js"></script>
     </head>
     <body ng-controller='mainCtrl'>
 
-        <div id="waveImageTop">
-        <img src="res//cornerwaveTop.png" alt="top image"/>
+        <div ng-if="phoneGraphic" id="waveImageTop">
+        <img src="res//phoneg.gif" alt="top image"/>
         </div>
 
         <div id="topWrapper">
@@ -55,6 +54,7 @@
                       <div class="nMobile">
                         <h4>About</h4>
                     </div>
+                  </li>
                       <li class="work">
                         <div class="nMobile">
                         <h4>Work</h4>
@@ -65,7 +65,11 @@
                         <h4>Contact</h4>
                       </div>
                       </li>
-                    </li>
+                      <li class="replayintro">
+                        <div class="nMobile">
+                        <h4>Replay Intro</h4>
+                      </div>
+                      </li>
                   </ul>
                 </div>
             </nav>
@@ -86,5 +90,6 @@
     document.getElementsByTagName('body')[0].classList.add("blueFlash");
   </script>
 <?php endif; ?>
+  <script src="js/particles.js"></script>
     </body>
 </html>
