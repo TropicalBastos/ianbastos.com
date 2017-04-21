@@ -10,6 +10,7 @@ $(document).ready(function(){
     $("canvas").addClass("fadingIn");
     pageLoaded = true;
     setup();
+    $("#phoneGraphic>h1").addClass("slideInForPhone");
   },1000);
 
    //hide particle canvas if not on about page
@@ -43,7 +44,7 @@ $(document).ready(function(){
     //scroll event handler
     $(window).on('scroll',function(){
         $("#waveImage>img").css("opacity",calculateOp());
-        $("#waveImageTop").css("opacity",reverseOp());
+        $("#phoneGraphic").css("opacity",reverseOp());
 
         if($("body").scrollTop() >= 400
             || document.documentElement.scrollTop >= 400){
@@ -157,9 +158,10 @@ $(document).ready(function(){
     });
 
     //reset pop up
-    $(".contact").click(function(){
+    $(".about, .work, .contact").click(function(){
        followMePopped = false;
     });
+
 
     //send button event handler
     //checks if all fields are valid

@@ -11,7 +11,7 @@ function setup(){
   if(pageLoaded){
     h = $(".scrollDiv")[0].offsetTop;
     aboutCanvas = createCanvas(windowWidth,h);
-    for(var i = 0; i < 200; i++){
+    for(var i = 0; i < 100; i++){
         blueParticles[i] = new BlueParticle();
     }
   }

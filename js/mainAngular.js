@@ -30,6 +30,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
        });
        $scope.wordCount = 500;
        document.body.scrollTop = document.documentElement.scrollTop = 0;
+       $("#phoneGraphic>h1").addClass("slideInForPhone");
     });
     $(document).on('click touchend','.work',function(){
       $scope.phoneGraphic = false;
@@ -41,6 +42,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
        });
        $scope.wordCount = 500;
        document.body.scrollTop = document.documentElement.scrollTop = 0;
+       $("#phoneGraphic>h1").removeClass("slideInForPhone");
     });
     $(document).on('click touchend','.contact',function(){
        $scope.page = "pages/contact.html";
@@ -51,6 +53,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
          $("#cog").removeClass("spin");
        });
        document.body.scrollTop = document.documentElement.scrollTop = 0;
+       $("#phoneGraphic>h1").removeClass("slideInForPhone");
     });
     $(document).on('click touchend','.replayintro',function(){
       window.location.href="/";
