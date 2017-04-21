@@ -6,7 +6,7 @@ if(Cookies.get('intro')){
     whichPage = Cookies.get("intro");
     Cookies.remove("intro");
 }else{
-      window.location = "intro//intro.html";
+      window.location = "intro/intro.html";
 }
 
 var mainApp = angular.module('mainApp',[]);
@@ -23,6 +23,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
        $scope.page = "pages/about.html";
        $scope.phoneGraphic = true;
        $scope.$apply();
+
        $("canvas").css("display","block");
        $(".one-half").css("background-color","black");
        $(".navCollapse").hide('fold',function(){
@@ -31,7 +32,13 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
        $scope.wordCount = 500;
        document.body.scrollTop = document.documentElement.scrollTop = 0;
        $("#phoneGraphic>h1").addClass("slideInForPhone");
+
+       //restart particles
+       setTimeout(function(){
+         setup();
+       },500);
     });
+
     $(document).on('click touchend','.work',function(){
       $scope.phoneGraphic = false;
        $scope.page = "pages/work.html";
@@ -44,6 +51,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
        document.body.scrollTop = document.documentElement.scrollTop = 0;
        $("#phoneGraphic>h1").removeClass("slideInForPhone");
     });
+
     $(document).on('click touchend','.contact',function(){
        $scope.page = "pages/contact.html";
        $scope.phoneGraphic = false;

@@ -1,0 +1,28 @@
+{
+  "name": "ianbastos",
+  "homepage": "...",
+  "authors": [
+    "Ian Bastos <ian-bastos@live.com>"
+  ],
+  "description": "personal website",
+  "main": "index.php",
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "jquery": "^3.2.1",
+    "p5.js": "p5js#^0.5.8",
+    "js-cookie": "^2.1.4",
+    "jquery-ui": "^1.12.1"
+  }
+}

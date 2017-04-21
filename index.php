@@ -14,11 +14,11 @@
         <link rel='stylesheet' type='text/css' href='css/loader.css'>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js'></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="bower_components/js-cookie/src/js.cookie.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src='bower_components/p5.js/lib/p5.min.js'></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
         <script src="js/mainpage.js"></script>
         <script src='js/mainAngular.js'></script>
     </head>
