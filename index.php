@@ -70,10 +70,7 @@ require("config.php");
                 </div>
             </nav>
         </div>
-
         <div id='includer' ng-include src="page">
-
-
         </div>
 <?php if($isMobile): ?>
   <script>

@@ -53,9 +53,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
       });
       $scope.wordCount = 500;
       document.body.scrollTop = document.documentElement.scrollTop = 0;
-      $("#phoneGraphic>h1").addClass("slideInForPhone");
-      $("#phoneGraphic2>h1").addClass("slideInForPhoneReversed");
-
+      setTimeout(addPhoneTextClass,200);
       //restart particles
       setTimeout(function(){
         setup();
@@ -93,5 +91,18 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     $(document).on("click","#phoneGraphic2",function(){
       window.location.href = "/";
     });
+
+    /*
+    function that adds slideinforphone class after the
+    about page has been appended to the dom, so jquery can find the elements
+    */
+    function addPhoneTextClass(){
+      if(!$("#phoneGraphic>h1").hasClass("slideInForPhone")){
+        $("#phoneGraphic>h1").addClass("slideInForPhone");
+      }
+      if(!$("#phoneGraphic2>h1").hasClass("slideInForPhoneReversed")){
+        $("#phoneGraphic2>h1").addClass("slideInForPhoneReversed");
+      }
+    }
 
 }]);
