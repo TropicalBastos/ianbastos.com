@@ -24,10 +24,7 @@
     </head>
     <body ng-controller='mainCtrl'>
 
-        <div ng-if="phoneGraphic" id="phoneGraphic">
-          <h1>Contact me</h1>
-        <img src="res//phoneg.gif" alt="top image"/>
-        </div>
+        
 
         <div id="topWrapper">
             <h1>Ian Bastos</h1>

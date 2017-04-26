@@ -397,19 +397,23 @@ p{
     -webkit-transition: all ease .5s;
     transition: all ease .5s;
 }
-
 #phoneGraphic{
+  right: 0%;
+}
+#phoneGraphic2{
+  left:0%;
+}
+.phoneGraphic{
     position: fixed;
     display: block;
     z-index: -1;
     top: 100px;
-    right: 0%;
 }
-#phoneGraphic>img{
+.phoneGraphic>img{
   width: 250px;
   height: 500px;
 }
-#phoneGraphic>h1{
+.phoneGraphic>h1{
   opacity: 0;
   margin: 0;
   font-size: 28px;
@@ -418,6 +422,11 @@ p{
 .slideInForPhone{
   opacity: 1 !important;
   transform: skew(0deg,-11deg) translateX(-11px) translateY(45px) !important;
+  transition: all .4s ease-in;
+}
+.slideInForPhoneReversed{
+  opacity: 1 !important;
+  transform: skew(0deg,11deg) translateX(11px) translateY(45px) !important;
   transition: all .4s ease-in;
 }
 #waveImage>img{
@@ -766,7 +775,7 @@ textarea:focus{
 
 /** General media queries **/
 @media screen and (max-width: 1500px){
-  #phoneGraphic{
+  .phoneGraphic{
     display: none;
   }
 }

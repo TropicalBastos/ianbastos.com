@@ -9,8 +9,11 @@ $(document).ready(function(){
     $(".one-half").css("background-color","black");
     $("canvas").addClass("fadingIn");
     pageLoaded = true;
+    //start particles
     setup();
+    //start reel in text animation above phones
     $("#phoneGraphic>h1").addClass("slideInForPhone");
+    $("#phoneGraphic2>h1").addClass("slideInForPhoneReversed");
   },1000);
 
    //hide particle canvas if not on about page
@@ -44,7 +47,7 @@ $(document).ready(function(){
     //scroll event handler
     $(window).on('scroll',function(){
         $("#waveImage>img").css("opacity",calculateOp());
-        $("#phoneGraphic").css("opacity",reverseOp());
+        $(".phoneGraphic").css("opacity",reverseOp());
 
         if($("body").scrollTop() >= 400
             || document.documentElement.scrollTop >= 400){
