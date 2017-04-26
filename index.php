@@ -1,31 +1,29 @@
 <?php
-//check on the backend to see if device is mobile
-  require_once 'Mobile_Detect.php';
-  $detect = new Mobile_Detect;
-  $isMobile = $detect->isMobile();
+require("config.php");
+ ?>
 
-?>
 <!DOCTYPE html>
 <html ng-app='mainApp'>
     <head>
         <title>Ian Bastos</title>
+        <!--build:css css/main.min.css-->
         <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
-        <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' type='text/css' href='bower_components/font-awesome/css/font-awesome.min.css'>
         <link rel='stylesheet' type='text/css' href='css/loader.css'>
+        <!--endbuild-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--build:js js/main.min.js-->
         <script src="bower_components/js-cookie/src/js.cookie.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src='bower_components/p5.js/lib/p5.min.js'></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-        <script src="js/mainpage.js"></script>
-        <script src='js/mainAngular.js'></script>
+        <script src="js/main.js"></script>
+        <script src='js/mainCtrl.js'></script>
+        <!--endbuild-->
     </head>
     <body ng-controller='mainCtrl'>
-
-        
-
         <div id="topWrapper">
             <h1>Ian Bastos</h1>
         </div>
