@@ -401,13 +401,19 @@ p{
   right: 0%;
 }
 #phoneGraphic2{
-  left:0%;
+  left:5px;
+}
+.phoneGraphic:hover{
+  transform: scale(1.2,1.2);
+  transition: all .2s;
 }
 .phoneGraphic{
     position: fixed;
     display: block;
     z-index: -1;
     top: 100px;
+    cursor:pointer;
+    z-index: 1;
 }
 .phoneGraphic>img{
   width: 250px;
