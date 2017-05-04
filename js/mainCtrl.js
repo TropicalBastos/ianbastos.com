@@ -105,4 +105,15 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
       }
     }
 
-}]);
+}])
+.directive('ngWork',function(){
+  return {
+    restrict: 'E',
+    scope: {
+      worktitle: '@',
+      src: '@'
+    },
+    transclude: true,
+    templateUrl : "js/directives/workdirective.html"
+  }
+});
