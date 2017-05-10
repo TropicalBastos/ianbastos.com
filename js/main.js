@@ -258,3 +258,18 @@ function onNavExitListener(e){
       }
   }
 }
+
+function toggleWebsiteTitle(){
+  $("#websites").addClass("popped");
+}
+
+function animateWorkDivs(){
+  var delay = 100;
+  $(".work-div").each(function(i,obj){
+    var jq = $(this);
+    delay = delay + 100;
+    setTimeout(function(){
+      jq.addClass("emplace");
+    },delay);
+  });
+}

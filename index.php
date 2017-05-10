@@ -10,6 +10,7 @@ require("config.php");
         <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
         <link rel='stylesheet' type='text/css' href='bower_components/font-awesome/css/font-awesome.min.css'>
         <link rel='stylesheet' type='text/css' href='css/loader.css'>
+        <link rel="stylesheet" type="text/css" href="css/work.css">
         <!--endbuild-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -47,7 +47,6 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
       $scope.$apply();
 
       $("canvas").css("display","block");
-      $(".one-half").css("background-color","black");
       $(".navCollapse").hide('fold',function(){
         $("#cog").removeClass("spin");
       });
@@ -57,6 +56,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
       //restart particles
       setTimeout(function(){
         setup();
+        $(".one-half").css("background-color","black");
       },500);
     }
 
@@ -70,6 +70,11 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
       $scope.wordCount = 500;
       document.body.scrollTop = document.documentElement.scrollTop = 0;
       $(".phoneGraphic>h1").removeClass("slideInForPhone");
+      setTimeout(function(){
+        $("canvas").css("display","none"); //make sure canvas is hidden
+      },500);
+      toggleWebsiteTitle();
+      animateWorkDivs();
     }
 
     $scope.goToContactPage = function(){
@@ -117,3 +122,6 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     templateUrl : "js/directives/workdirective.html"
   }
 });
+
+setTimeout(toggleWebsiteTitle,500);
+setTimeout(animateWorkDivs,500);
