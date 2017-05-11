@@ -10,8 +10,6 @@ $(document).ready(function(){
     $(".one-half").css("background-color","black");
     $("canvas").addClass("fadingIn");
     pageLoaded = true;
-    //start particles
-    setup();
     //start reel in text animation above phones
     $("#phoneGraphic>h1").addClass("slideInForPhone");
     $("#phoneGraphic2>h1").addClass("slideInForPhoneReversed");
@@ -21,7 +19,11 @@ $(document).ready(function(){
    setTimeout(function(){
    if(whichPage!=="pages/about.html"){
         $("canvas").css("display","none");
-    }},50);
+    }else{
+      //start particles
+      setup();
+    }
+  },1000);
 
 
     // if follow me pop up has appeared

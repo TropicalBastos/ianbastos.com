@@ -197,7 +197,8 @@ p{
     max-width: 80%;
     display: block;
     margin: 0 auto;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #contentWrapper{
     width: 80%;

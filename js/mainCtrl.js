@@ -73,8 +73,8 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
       setTimeout(function(){
         $("canvas").css("display","none"); //make sure canvas is hidden
       },500);
-      toggleWebsiteTitle();
-      animateWorkDivs();
+      setTimeout(toggleWebsiteTitle,500);
+      setTimeout(animateWorkDivs,500);
     }
 
     $scope.goToContactPage = function(){

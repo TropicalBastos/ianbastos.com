@@ -94,6 +94,12 @@ a{
   padding: 20px;
 }
 
+.blankspace{
+  width:100%;
+  height: 100px;
+  clear: both;
+}
+
 @media screen and (max-width:750px){
   .work-div{
     width: 100%;
