@@ -22,6 +22,7 @@ require("config.php");
         <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
         <script src="js/main.js"></script>
         <script src='js/mainCtrl.js'></script>
+        <script src="js/workcontextmenu.js"></script>
         <!--endbuild-->
     </head>
     <body ng-controller='mainCtrl'>

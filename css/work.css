@@ -100,6 +100,48 @@ a{
   clear: both;
 }
 
+.contextmenu{
+  position: absolute;
+  text-align: center;
+  top: 400px;
+  left: 0;
+  color: white;
+  transform: translate(-1000px,-300px);
+  z-index:1000;
+  transition: transform .3s;
+}
+.contextmenu.onscreen{
+  transform: translate(0px,-300px);
+}
+
+.contextmenu div{
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans';
+  border-bottom: solid 2px white;
+  background-color: black;
+  cursor: pointer;
+  font-family: zian;
+}
+.contextmenu div:hover{
+  background-color: #00c3c6;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.contextmenu div.active{
+  background-color: #00c3c6;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.contextmenufixed{
+  position: fixed;
+  top:0;
+  transform: none;
+}
+
 @media screen and (max-width:750px){
   .work-div{
     width: 100%;
