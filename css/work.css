@@ -87,7 +87,15 @@ a{
   display: block;
   width: 280px;
   height: 280px;
+  z-index: 1000;
   margin: auto;
+}
+
+.work-shadow{
+  width: 280px;
+  height: 30px !important;
+  transform: translateY(-10px);
+  z-index: -1000;
 }
 
 .work-desc{
@@ -139,14 +147,15 @@ a{
 .contextmenufixed{
   position: fixed;
   top:0;
-  transform: none;
+  transform: none !important;
 }
 
-@media screen and (max-width:750px){
-  .work-div{
-    width: 100%;
+@media screen and (max-width:1500px){
+  .contextmenu{
+    display: none;
   }
 }
+
 @media screen and (max-width:1000px){
   #headerSectionWork{
     top: -70px;
@@ -154,5 +163,11 @@ a{
   .work-div{
     margin: 0 auto;
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width:750px){
+  .work-div{
+    width: 100%;
   }
 }
