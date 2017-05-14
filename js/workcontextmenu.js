@@ -7,6 +7,7 @@
   var webdev;
   var mobile;
   var opensrc;
+  var api;
   var windowsdev;
   var otherprojects;
   var scrollSpeed = 200;
@@ -17,8 +18,12 @@
         webdev = document.getElementById("webdev").offsetTop;
         mobile = document.getElementById("mobile").offsetTop;
         opensrc = document.getElementById("opensrc").offsetTop;
+        api = document.getElementById("api").offsetTop;
         windowsdev = document.getElementById("windowsdev").offsetTop;
         otherprojects = document.getElementById("otherprojects").offsetTop;
+        return true;
+    }else{
+      return false;
     }
   }
 
@@ -75,23 +80,27 @@
 
     setValues();
 
-      if(scroll >= webdev && scroll < mobile){
+      if(scroll >= webdev && scroll < mobile && setValues()){
 
         highlightMenuItem("webcontext");
 
-      }else if(scroll >= mobile && scroll < opensrc){
+      }else if(scroll >= mobile && scroll < opensrc && setValues()){
 
         highlightMenuItem("mobilecontext");
 
-      }else if(scroll >= opensrc && scroll <= windowsdev){
+      }else if(scroll >= opensrc && scroll < api && setValues()){
 
         highlightMenuItem("opensrccontext");
 
-      }else if(scroll >= windowsdev && scroll < otherprojects){
+      }else if(scroll >= api && scroll < windowsdev && setValues()){
+
+        highlightMenuItem("apicontext");
+
+      }else if(scroll >= windowsdev && scroll < otherprojects && setValues()){
 
         highlightMenuItem("windowscontext");
 
-      }else if(scroll>=otherprojects){
+      }else if(scroll>=otherprojects && setValues()){
 
         highlightMenuItem("otherprojectscontext");
 
@@ -122,6 +131,10 @@
 
         if(element.id==="opensrccontext"){
           doScrolling(opensrc+scrollOffset,scrollSpeed);
+        }
+
+        if(element.id==="apicontext"){
+          doScrolling(api+scrollOffset,scrollSpeed);
         }
 
         if(element.id==="windowscontext"){

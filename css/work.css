@@ -114,12 +114,12 @@ a{
   top: 400px;
   left: 0;
   color: white;
-  transform: translate(-1000px,-300px);
+  transform: translate(-1000px,-400px);
   z-index:1000;
   transition: transform .3s;
 }
 .contextmenu.onscreen{
-  transform: translate(0px,-300px);
+  transform: translate(0px,-400px);
 }
 
 .contextmenu div{
