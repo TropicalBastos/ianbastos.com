@@ -152,6 +152,20 @@ a{
 
 @media screen and (max-width:1500px){
   .contextmenu{
+    transform: translate(-1050px,-400px) scale(0.6) !important;
+  }
+  .contextmenu.onscreen{
+    transform: translate(-50px,-400px) scale(0.6) !important;
+  }
+  .contextmenufixed{
+    position: fixed;
+    top:0;
+    transform: translate(-50px,-100px) scale(0.6) !important;
+  }
+}
+
+@media screen and (max-width:1250px){
+  .contextmenu{
     display: none;
   }
 }
