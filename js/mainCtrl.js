@@ -4,7 +4,8 @@ var whichPage;
 //check first if the intro has been played
 if(Cookies.get('intro')){
     whichPage = Cookies.get("intro");
-    Cookies.remove("intro");
+    //Cookies.remove("intro");
+    Cookies.set("intro","pages/about.html");
 }else{
       window.location = "intro/intro.html";
 }
@@ -94,6 +95,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     });
 
     $(document).on("click","#phoneGraphic2",function(){
+      Cookies.remove("intro");
       window.location.href = "/";
     });
 
