@@ -32,6 +32,7 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     });
 
     $(document).on('click touchend','.replayintro',function(){
+      Cookies.remove("intro");
       window.location.href="/";
     });
 
