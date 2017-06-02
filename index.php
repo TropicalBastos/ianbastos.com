@@ -12,6 +12,7 @@ require("config.php");
         <link rel='stylesheet' type='text/css' href='css/loader.css'>
         <link rel="stylesheet" type="text/css" href="css/work.css">
         <!--endbuild-->
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--build:js js/main.min.js-->

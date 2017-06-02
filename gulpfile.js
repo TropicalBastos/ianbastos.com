@@ -15,10 +15,11 @@ var config = "config.php";
 var particles = "js/particles.js";
 var fonts = "bower_components/font-awesome/fonts/*";
 var directives = "js/directives/*";
+var favicon = "favicon.png";
 
 var buildTasks = ["minifyJoinFiles","minifyIntro","buildBackend",
 "buildPages","buildResources","buildIntroRes","buildConfig","buildParticles",
-"buildFonts","buildDirectives"];
+"buildFonts","buildDirectives","buildFavicon"];
 
 //minifies and concatenates js and css files
 gulp.task("minifyJoinFiles",()=>{
@@ -79,6 +80,11 @@ gulp.task("buildFonts",()=>{
 gulp.task("buildDirectives",()=>{
   gulp.src(directives)
   .pipe(gulp.dest("dist/js/directives/"));
+});
+
+gulp.task("buildFavicon",()=>{
+  gulp.src(favicon)
+  .pipe(gulp.dest("dist/"));
 });
 
 //finally build app
