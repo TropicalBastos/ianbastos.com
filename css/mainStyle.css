@@ -773,6 +773,21 @@ textarea:focus{
 
 /** General media queries **/
 @media screen and (max-width: 1500px){
+  #phoneGraphic{
+    transform: translate(30px,80px) scale(0.8);
+  }
+  #phoneGraphic:hover{
+    transform: translate(30px,80px) scale(0.9);
+  }
+  #phoneGraphic2{
+    transform: translate(-30px,80px) scale(0.8);
+  }
+  #phoneGraphic2:hover{
+    transform: translate(-30px,80px) scale(0.9);
+  }
+}
+
+@media screen and (max-width:1200px){
   .phoneGraphic{
     display: none;
   }
