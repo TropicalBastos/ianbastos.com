@@ -7,7 +7,7 @@ if(Cookies.get('intro')){
     //Cookies.remove("intro");
     Cookies.set("intro","pages/about.html");
 }else{
-      window.location = "intro/intro.html";
+      window.location = "intro/";
 }
 
 var mainApp = angular.module('mainApp',[]);
