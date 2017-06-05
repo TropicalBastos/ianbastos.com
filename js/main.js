@@ -265,3 +265,14 @@ function animateWorkDivs(){
     },delay);
   });
 }
+
+//force click on mobile devices
+$(document).on("touchstart","#email",function(){
+  $("#email").focus();
+});
+$(document).on("touchstart","#subject",function(){
+  $("#subject").focus();
+});
+$(document).on("touchstart","#message",function(){
+  $("#message").focus();
+});
