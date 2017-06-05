@@ -92,18 +92,8 @@ $(document).ready(function(){
        $(this).attr("src","res//contactBtn.png");
     });
 
-    //link click event
-    $(document).on('click touchstart',".scrollDiv>h1",function(){
-      if($(this).parent().hasClass("github")){
-        window.location = "https://github.com/TropicalBastos";
-      }else{
-        window.location = "https://www.instagram.com/tropicalbastos/";
-      }
-    });
-
 
     //contact regex input handlers
-
     $(document).on('blur','#email',function(){
         $("#emailError").remove();
        var regex = /^[0-9a-zA-Z-.]+@[0-9a-zA-Z]+.([a-zA-Z]+.)?((com)|co.[a-zA-Z]{1,2})$/;
