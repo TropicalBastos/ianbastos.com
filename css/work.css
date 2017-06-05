@@ -108,6 +108,10 @@ a{
   clear: both;
 }
 
+.clearfix{
+  clear: both;
+}
+
 .contextmenu{
   position: absolute;
   text-align: center;

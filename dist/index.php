@@ -64,12 +64,30 @@ require("config.php");
 <?php if($isMobile): ?>
   <script>
     document.addEventListener('touchend',onNavExitListener);
+
+    //link click event
+    $(document).on('click touchstart',".scrollDiv>h1",function(){
+      if($(this).parent().hasClass("github")){
+        window.location = "https://github.com/TropicalBastos";
+      }else{
+        window.location = "https://www.instagram.com/tropicalbastos/";
+      }
+    });
   </script>
 <?php else: ?>
   <script>
     document.addEventListener('click',onNavExitListener);
     //mobile buggy with css transitions so only available in desktop
     document.getElementsByTagName('body')[0].classList.add("blueFlash");
+
+    //link click event for desktops
+    $(document).on('click touchstart',".scrollDiv>h1",function(){
+      if($(this).parent().hasClass("github")){
+        window.open("https://github.com/TropicalBastos");
+      }else{
+        window.open("https://www.instagram.com/tropicalbastos/");
+      }
+    });
   </script>
 <?php endif; ?>
   <script src="js/particles.js"></script>
