@@ -19,19 +19,19 @@ mainApp.controller('mainCtrl',['$scope',function($scope){
     $scope.wordCount = 500;
 
     //set pathname for dynamic loaded pieces of html
-    $(document).on('click touchend','.about',function(){
+    $(document).on('click touchstart','.about',function(){
       $scope.goToAboutPage();
     });
 
-    $(document).on('click touchend','.work',function(){
+    $(document).on('click touchstart','.work',function(){
        $scope.goToWorkPage();
     });
 
-    $(document).on('click touchend','.contact',function(){
+    $(document).on('click touchstart','.contact',function(){
       $scope.goToContactPage();
     });
 
-    $(document).on('click touchend','.replayintro',function(){
+    $(document).on('click touchstart','.replayintro',function(){
       Cookies.remove("intro");
       window.location.href="/";
     });

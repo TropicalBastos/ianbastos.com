@@ -63,7 +63,7 @@ $(document).ready(function(){
         });
 
     //click nav cog handler
-    $("#cog").on('click',function(){
+    $("#cog").on('click touchstart',function(){
       $("#cog").addClass("spin");
       $(".navCollapse").toggle('fold',function(){
         $("#cog").removeClass("spin");
@@ -93,7 +93,7 @@ $(document).ready(function(){
     });
 
     //link click event
-    $(document).on('click',".scrollDiv>h1",function(){
+    $(document).on('click touchstart',".scrollDiv>h1",function(){
       if($(this).parent().hasClass("github")){
         window.open("https://github.com/TropicalBastos");
       }else{
@@ -164,14 +164,14 @@ $(document).ready(function(){
     });
 
     //reset pop up
-    $(".about, .work, .contact").click(function(){
+    $(".about, .work, .contact").on('click touchstart',function(){
        followMePopped = false;
     });
 
 
     //send button event handler
     //checks if all fields are valid
-    $(document).on("click","form>button.contactButton",function(){
+    $(document).on("click touchstart","form>button.contactButton",function(){
 
       var allOk = true;
       for(var i = 0; i < okToSend.length; i++){
@@ -224,7 +224,7 @@ $(document).ready(function(){
     }
 
     //close message context
-    $(document).on("click",".messageSent>button.contactButton",function(){
+    $(document).on("click touchstart",".messageSent>button.contactButton",function(){
         $(".messageSent").fadeOut(200,function(){
            $(".messageSent").removeClass("sent");
         });
