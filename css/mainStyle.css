@@ -729,7 +729,7 @@ textarea:focus{
 .messageSent.sent{
     width:33%;
     left: 33%;
-    height: 100px;
+    height: auto;
 }
 
 .navbar-mobile{
@@ -956,6 +956,10 @@ textarea:focus{
   }
   .scrollDiv:before{
       height: 50px;
+  }
+
+  .messageSent{
+    padding: 2px;
   }
 }
 
