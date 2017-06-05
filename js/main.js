@@ -93,11 +93,11 @@ $(document).ready(function(){
     });
 
     //link click event
-    $(document).on('click touchstart',".scrollDiv>h1",function(){
+    $(document).on('click touchstart',".scrollDiv.github>h1",function(){
       if($(this).parent().hasClass("github")){
-        window.open("https://github.com/TropicalBastos");
+        window.location = "https://github.com/TropicalBastos";
       }else{
-        window.open("https://www.instagram.com/tropicalbastos/");
+        window.location = "https://www.instagram.com/tropicalbastos/";
       }
     });
 
