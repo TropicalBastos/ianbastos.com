@@ -63,7 +63,7 @@ $(document).ready(function(){
         });
 
     //click nav cog handler
-    $("#cog").on('click touchstart',function(){
+    $(document).on('click touchstart','#cog',function(){
       $("#cog").addClass("spin");
       $(".navCollapse").toggle('fold',function(){
         $("#cog").removeClass("spin");
