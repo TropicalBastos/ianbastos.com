@@ -188,6 +188,20 @@ p{
     }
 }
 
+#cv{
+  position: relative;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  top: -40px;
+  cursor: pointer;
+}
+#cv:hover{
+  color: #00c3c6;
+}
+
 #content{
     margin-top: 80px;
 }

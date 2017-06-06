@@ -276,3 +276,8 @@ $(document).on("touchstart","#subject",function(){
 $(document).on("touchstart","#message",function(){
   $("#message").focus();
 });
+
+//cv download
+$(document).on("click touchstart","#cv",function(){
+  window.location = "downloads/CV.pdf";
+});
