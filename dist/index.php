@@ -90,6 +90,8 @@ require("config.php");
     });
   </script>
 <?php endif; ?>
+
   <script src="js/particles.js"></script>
+
     </body>
 </html>
